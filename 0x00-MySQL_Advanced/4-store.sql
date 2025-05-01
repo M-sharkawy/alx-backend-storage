@@ -1,5 +1,4 @@
 -- creates a trigger that decreases the quantity of an item after adding a new order.
---Quantity in the table items can be negative
 CREATE TRIGGER after_adding_dec_items
 AFTER INSERT ON orders
 FOR EACH ROW
