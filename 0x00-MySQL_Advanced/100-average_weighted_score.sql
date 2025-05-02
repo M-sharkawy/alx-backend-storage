@@ -3,7 +3,6 @@
 DELIMITER $$
 CREATE PROCEDURE ComputeAverageWeightedScoreForUser (user_id INT)
 BEGIN
-    BEGIN
     DECLARE weight_sum INT DEFAULT 0;
     DECLARE student_weighted_sum INT DEFAULT 0;
 
