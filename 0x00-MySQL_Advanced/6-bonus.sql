@@ -3,7 +3,7 @@ DROP PROCEDURE IF EXISTS AddBonus;
 DELIMITER $$
 CREATE PROCEDURE AddBonus(IN user_id INT, IN project_name VARCHAR(255), OUT score INT)
 BEGIN
-    DECLARE project_exist DEAFULT 0;
+    DECLARE project_exist INT DEAFULT 0;
 
     SELECT COUNT(id) INTO project_exist
     FROM users
