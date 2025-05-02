@@ -11,7 +11,7 @@ BEGIN
 
     IF project_exist = 0 THEN
         INSERT INTO project (name)
-        VALUE (project_name);
+        VALUES (project_name);
     END IF;
 
     INSERT INTO correction (user_id, project_id, score)
