@@ -1,9 +1,8 @@
 --  creates a stored procedure 'ComputeAverageScoreForUser' that computes and store the average score for a student
 DROP PROCEDURE IF EXISTS ComputeAverageScoreForUser
 DELIMITER $$
-CREATE PROCEDURE ComputeAverageScoreForUser (IN user_id INT)
+CREATE PROCEDURE ComputeAverageScoreForUser (user_id INT)
 BEGIN
-
     DECLARE AVG_SCORE FLOAT DEFAULT 0;
 
     SELECT AVG(score) INTO AVG_SCORE
@@ -13,6 +12,5 @@ BEGIN
     UPDATE users
     SET average_score = AVG_SCORE
     WHERE id = user_id;
-
 END $$
 DELIMITER ;
